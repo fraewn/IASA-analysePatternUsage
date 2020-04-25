@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1d8fnnj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.5.0">
+  <decision id="Decision_1ypmd15" name="Decide on recommandations">
+    <extensionElements>
+      <biodi:bounds x="150" y="75" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="RULE ORDER">
+      <input id="InputClause_16bivdv" label="RtOQ01" camunda:inputVariable="RtOQ01">
+        <inputExpression id="LiteralExpression_1oybl3w" typeRef="boolean">
+          <text>RtOQ01</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0jgpftr" label="RtOQ02" camunda:inputVariable="RtOQ02">
+        <inputExpression id="LiteralExpression_1pqj7tn" typeRef="boolean">
+          <text>RtOQ02</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_00nxkgi" label="RtOQ03" camunda:inputVariable="RtOQ03">
+        <inputExpression id="LiteralExpression_0qcbzop" typeRef="boolean">
+          <text>RtOQ03</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_001hph6" label="RtOQ04" camunda:inputVariable="RtOQ04">
+        <inputExpression id="LiteralExpression_0so02b0" typeRef="boolean">
+          <text>RtOQ04</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0v04t3v" label="RtOQ05" camunda:inputVariable="RtOQ05">
+        <inputExpression id="LiteralExpression_1pmbfg5" typeRef="boolean">
+          <text>RtOQ05</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_111ookv" label="RtOQ06" camunda:inputVariable="RtOQ06">
+        <inputExpression id="LiteralExpression_09mui7k" typeRef="boolean">
+          <text>RtOQ06</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1lu4qw5" label="RtOQ07" camunda:inputVariable="RtOQ07">
+        <inputExpression id="LiteralExpression_1y6bx6o" typeRef="boolean">
+          <text>RtOQ07</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0jmm9ib" label="RtOQ08" camunda:inputVariable="RtOQ08">
+        <inputExpression id="LiteralExpression_0midtz2" typeRef="boolean">
+          <text>RtOQ08</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ifaknl">
+        <inputExpression id="LiteralExpression_04xeol7" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1i6p6ox">
+        <inputExpression id="LiteralExpression_1iqrfbq" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="rec" name="rec" typeRef="string" />
+      <rule id="DecisionRule_0o88uqm">
+        <inputEntry id="UnaryTests_1ojx97p">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wyhsog">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ndjci4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_132llu8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fz4k9b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cm1gmx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tpa377">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00j2ybm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rlcplu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gdmf1p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08t1dot">
+          <text>"Kritisch: Die Pattern Komponente Testklasse scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eumr3a">
+        <inputEntry id="UnaryTests_0yyot1w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16t1uj1">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w9qdho">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17abbyb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kifcrr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m0ctcd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bcggx2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09nuc2k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nusnt4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wxsr4y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05y43q2">
+          <text>"Kritisch: Die Pattern Komponente DAO scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0z6a77d">
+        <inputEntry id="UnaryTests_1ybkh78">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12ekbf7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kffavc">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zzwckk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06bynmw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1suvctd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k7y4ze">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n3az8s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lw1i0n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ee8s86">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0h3v46y">
+          <text>"Kritisch: Es scheint keine Vergleichsklasse implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tqu2i0">
+        <inputEntry id="UnaryTests_0i1cjd9">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03e7s86">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o52x32">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ujxlbf">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19vy29x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gm29wo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17gsweo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0el09to">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k5sgrz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1th7bn0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01c4wc8">
+          <text>"Kritisch: Bitte überprüfen, ob die Testklasse die DAO Klasse implementiert."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1o3i9fn">
+        <inputEntry id="UnaryTests_09ux5v8">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17q6sc6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xcmyle">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08x5zy4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1um8x89">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r2nss1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10f0pub">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pl08po">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qcm5j4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q7kulv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mvfu7r">
+          <text>"Kritisch: Bitte überprüfen, ob die Testklasse die Vergleichsklasse implementiert."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0no932x">
+        <inputEntry id="UnaryTests_0i45g5h">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0edikou">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f5j43d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17y9ecs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wptfkr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mvzscx">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r2ejl0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d2dhqb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p7tbqk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yzdhcz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uwwp1u">
+          <text>"Kritisch: In der Testklasse findet kein Aufruf einer Create-Methode in der DAO statt! Für die korrekte Implementierung muss mindestens ein solcher Methodenaufruf vorhanden sein!"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08lyd6b">
+        <inputEntry id="UnaryTests_04z02ty">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l7m722">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jj2l90">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cd6s2t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vt5vgz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n2f3ib">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iqyuso">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ubxwfb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pf4pxi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04o1xpr">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12rdiu9">
+          <text>"Kritisch: In der Testklasse findet kein Aufruf einer Read-Methode in der DAO statt! Für die korrekte Implementierung muss mindestens ein solcher Methodenaufruf vorhanden sein!"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jsupau">
+        <inputEntry id="UnaryTests_1021ji3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xkzosg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yypqte">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rpx90k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0th3gwz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h1t95j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fh4xlc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bek811">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f81x7k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n9zq22">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xz0px6">
+          <text>"Kritisch: In der Klasse zum Vergleich ist keine Equals-Methode implementiert! Für den korrekten Vergleich muss eine Equals-Methode implementiert werden!"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

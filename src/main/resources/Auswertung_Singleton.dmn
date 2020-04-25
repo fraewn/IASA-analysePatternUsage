@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1d8fnnj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.5.0">
+  <decision id="Decision_1ypmd11" name="Decide on recommandations">
+    <extensionElements>
+      <biodi:bounds x="150" y="75" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="RULE ORDER">
+      <input id="InputClause_0zeagdt" label="SgPQ01" camunda:inputVariable="SgPQ01">
+        <inputExpression id="LiteralExpression_1k3ygcq" typeRef="boolean">
+          <text>SgPQ01</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0oocqy8" label="SgPQ02" camunda:inputVariable="SgPQ02">
+        <inputExpression id="LiteralExpression_1kmgy6f" typeRef="integer">
+          <text>SgPQ02</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_16kwfhy" label="SgPQ03" camunda:inputVariable="SgPQ03">
+        <inputExpression id="LiteralExpression_0ew3g8m" typeRef="boolean">
+          <text>SgPQ03</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_185mh6a" label="SgPQ04" camunda:inputVariable="SgPQ04">
+        <inputExpression id="LiteralExpression_0vt8sxv" typeRef="boolean">
+          <text>SgPQ04</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_08o1esl" label="SgPQ05" camunda:inputVariable="SgPQ05">
+        <inputExpression id="LiteralExpression_0yb6x4m" typeRef="boolean">
+          <text>SgPQ05</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0sikiiw" label="SgPQ06" camunda:inputVariable="SgPQ06">
+        <inputExpression id="LiteralExpression_1111trf" typeRef="boolean">
+          <text>SgPQ06</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1frih0f" label="SgPQ07" camunda:inputVariable="SgPQ07">
+        <inputExpression id="LiteralExpression_1exgsrz" typeRef="boolean">
+          <text>SgPQ07</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1x6k0yj" label="SgPQ08" camunda:inputVariable="SgPQ08">
+        <inputExpression id="LiteralExpression_1w94bfh" typeRef="boolean">
+          <text>SgPQ08</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_11wqxko" label="SgPQ09" camunda:inputVariable="SgPQ09">
+        <inputExpression id="LiteralExpression_1ej7u7v" typeRef="string">
+          <text>SgPQ09</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1eow6tw">
+        <inputExpression id="LiteralExpression_1nynqf9" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1pv62g1">
+        <inputExpression id="LiteralExpression_04qfe4d" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0i536tx">
+        <inputExpression id="LiteralExpression_1u57ifo" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_10qqks4">
+        <inputExpression id="LiteralExpression_0sm11ye" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="rec" name="rec" typeRef="string" />
+      <rule id="DecisionRule_0st5tnr">
+        <inputEntry id="UnaryTests_163qsvs">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h1znes">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rny594">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o5i61d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a806tz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v4jm3t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mhzzme">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14jnqdu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16iuaei">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dh9lta">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x96zf4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02nl6ao">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0saycxx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jzdr3k">
+          <text>"Kritisch: Die Pattern Komponente Singleton scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07qgjii">
+        <inputEntry id="UnaryTests_008xi1w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e6xoeq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01a16d4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ofdaj5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_166gsze">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13wd12w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sxag03">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r6utgf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_098fo3r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_181fne8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t9rdzz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_118vevr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tw87lb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lnpsxc">
+          <text>"Nicht-Kritisch: Es scheint keine benutzende Klasse (Client) zu geben. Bitte überprüfen, ob das Singleton Pattern überhaupt genutzt wird."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12o6wcv">
+        <inputEntry id="UnaryTests_1lmiuha">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_002vpck">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i6aogv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ehofff">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12bkd2x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06x6osr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0owqvop">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0so02la">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_024b75w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o013me">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gx8dyq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rwmj0v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hqgnbr">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r7exnj">
+          <text>"Nicht-Kritisch: Es wurde nur eine benutzende Klasse (Client) gefunden. Ergibt die Verwendung des Singleton Patterns hier Sinn?"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_128fxvf">
+        <inputEntry id="UnaryTests_11tl9ew">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nwfdyt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nedtwg">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17iinjb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t07hty">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rkguqg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_016lbr3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07q1g87">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fffzxn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ldsn23">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zy20ok">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jbrv9n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wfwxea">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yyn3g7">
+          <text>"Kritisch: Es wurde eine Erweiterung der Singleton Klasse durch die benutzende Klasse (Client) gefunden! Diese sollten nicht bestehen!"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eegrot">
+        <inputEntry id="UnaryTests_10zmbhw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uyylhx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ne54i9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cisruv">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n33apw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17w96sn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13k97py">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1528bfe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yuh4q8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g1mh8l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1abgdyd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15e9kwl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15yh2rx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cmqeo2">
+          <text>"Kritisch: es wurde eine Implementierung der Singleton Klasse durch die benutzende Klasse (Client) gefunden! Diese sollten nicht bestehen!"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qgu33c">
+        <inputEntry id="UnaryTests_1cm5vi3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iiswx9">
+          <text>&gt;0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tj10kp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_193kxd1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0chn585">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jhn68a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fkvsdl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h9mrjx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_117am90">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12icei3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02i5a2p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ogz281">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lwi5ym">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bh94mz">
+          <text>"Nicht-Kritisch: Die benutzende Klasse (Client) nutzt die Singleton Klasse nicht. Bitte überprüfen, ob das Singleton Pattern überhaupt genutzt wird."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bm5aio">
+        <inputEntry id="UnaryTests_1sne2gb">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nevjae">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vd73a9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ga3gq7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t2y0i0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iggb7k">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_049prdg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iw8kgo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wxuoio">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qhn3se">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18ywsne">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s7fdep">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ua329d">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19p9at4">
+          <text>"Kritisch: Die Sichtbarkeit des Konstruktors der Singleton Klasse ist nicht privat! Für die korrekte Implementierung muss die Sichtbarkeit auf privat gestellt werden!"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14uzl3r">
+        <inputEntry id="UnaryTests_032yzhu">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03l4i76">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_170dcwo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rsdvwe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0idkuxz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03jr4pz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o4s0j0">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ak8i9t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_054av1t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zpa94a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h28bw7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q326dp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v9kt9a">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_175uk1k">
+          <text>"Kritisch: Die Singleton Klasse besitzt kein privates statisches Klassenattribut, in welchem das Singleton Objekt gespeichert ist! Für die korrekte Implementierung muss ein entsprechendes Klassenattribut vorhanden sein!"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04uuary">
+        <inputEntry id="UnaryTests_0zy6tl2">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1el70gy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_192jf13">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qoffv0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ahp48b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11bjels">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pnik7n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nicl72">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j8ybzt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1teffwo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tphqto">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c589sq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sqlobz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uau2j8">
+          <text>"Kritisch: Die Singleton Klasse besitzt keine statische Getter-Methode, 
+um das Singleton Objekt bereit zu stellen! Für die korrekte Implementierung 
+muss eine solche Getter-Methode vorhanden sein!"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tvcmc4">
+        <inputEntry id="UnaryTests_0ibdktc">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vp9f03">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qkkuch">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gj4f80">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_016jezo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1phbs97">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xnrnmt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10zdwvj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nxdidk">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fzncwb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bjfe65">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f3pod9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fxa2wr">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1sory9a">
+          <text>"Kritisch: Die Singleton Klasse nutzt keine Synchronisierung! Das kann zu einem Unterlaufen des Singleton Patterns führen."</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

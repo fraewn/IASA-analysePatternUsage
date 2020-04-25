@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1d8fnnj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.5.0">
+  <decision id="Decision_1ypmd14" name="Decide on recommandations">
+    <extensionElements>
+      <biodi:bounds x="150" y="75" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="RULE ORDER">
+      <input id="InputClause_0q0nybf" label="CmPQ01" camunda:inputVariable="CmPQ01">
+        <inputExpression id="LiteralExpression_0dd6ll9" typeRef="boolean">
+          <text>CmPQ01</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0rqg31j" label="CmPQ02" camunda:inputVariable="CmPQ02">
+        <inputExpression id="LiteralExpression_1q5ztf8" typeRef="boolean">
+          <text>CmPQ02</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1p9amp1" label="CmPQ03" camunda:inputVariable="CmPQ03">
+        <inputExpression id="LiteralExpression_0mjbv2u" typeRef="boolean">
+          <text>CmPQ03</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1tp08db" label="CmPQ04" camunda:inputVariable="CmPQ04">
+        <inputExpression id="LiteralExpression_12wsm16" typeRef="boolean">
+          <text>CmPQ04</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0gckq79" label="CmPQ05" camunda:inputVariable="CmPQ05">
+        <inputExpression id="LiteralExpression_1n44boe" typeRef="integer">
+          <text>CmPQ05</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0wzcz80" label="CmPQ06" camunda:inputVariable="CmPQ06">
+        <inputExpression id="LiteralExpression_1dlaote" typeRef="boolean">
+          <text>CmPQ06</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0b1ef2u" label="CmPQ07" camunda:inputVariable="CmPQ07">
+        <inputExpression id="LiteralExpression_17k3imt" typeRef="boolean">
+          <text>CmPQ07</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1l11hzg" label="CmPQ08" camunda:inputVariable="CmPQ08">
+        <inputExpression id="LiteralExpression_1fp1bcf" typeRef="boolean">
+          <text>CmPQ08</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1cdf049" label="CmPQ09" camunda:inputVariable="CmPQ09">
+        <inputExpression id="LiteralExpression_1dax2ue" typeRef="boolean">
+          <text>CmPQ09</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0dbabkl" label="CmPQ10" camunda:inputVariable="CmPQ10">
+        <inputExpression id="LiteralExpression_0407l3b" typeRef="boolean">
+          <text>CmPQ10</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_19sufau">
+        <inputExpression id="LiteralExpression_1s263gn" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="rec" name="rec" typeRef="string" />
+      <rule id="DecisionRule_1d7ezuj">
+        <inputEntry id="UnaryTests_1vfx7iq">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ywnd6n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dojkml">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09200g6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15zalmm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14qyqhm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1av9bc8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jj5jkx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19edkda">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wur6fm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vya51a">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hwc9s2">
+          <text>"Kritisch: Die Musterkomponente 'AbstractCommand' scheint nicht implementiert zu sein. "</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13vx29f">
+        <inputEntry id="UnaryTests_0u7u1xb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mwkino">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05h0rg7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_060uj35">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p9668k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14z93f0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1169os2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v8pnjk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0egf86k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_126vukf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kc4j0m">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0930rz3">
+          <text>"Kritisch: Die Musterkomponente 'CommandCaller' scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kpu9if">
+        <inputEntry id="UnaryTests_0en1cmy">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1skem48">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oq3u6b">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q14unz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mnp7a9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o2moid">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e2imaf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_139gdg7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ijc18j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09xv537">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xy9y4b">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cyl7y2">
+          <text>"Kritisch: Bitte überprüfen Sie, ob die ConcreteCommand-Klassen von der Abstract-Command-Klasse erben."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ydz6a7">
+        <inputEntry id="UnaryTests_13dsk1j">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qeyv60">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ya6226">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19cbds1">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wcx4xg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dasbd9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ibmkku">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c6jji0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wmepan">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iauc5z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03h9zs2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fe52xt">
+          <text>"Kritisch: Bitte überprüfen Sie, ob Ihr CommandCaller die AbstractCommand-Komponente überhaupt nutzt - Sind die implementierten Klassen an dieser Stelle überhaupt in Gebrauch?"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tqn6gy">
+        <inputEntry id="UnaryTests_0b30ave">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gg3c9b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qda9mm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xe386y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nxgjnb">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d28crr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r1pw0q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iu8109">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qj3d4k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q2d2y1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ux52fz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v75oyq">
+          <text>"Kritisch: Es scheint keine konkreten Command-Klassen zu geben, was dem Nutzungsgedanken des Musters widerspricht. "</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04lwz0w">
+        <inputEntry id="UnaryTests_1lmcvti">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_036djgg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yiot6a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mx4os7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_192y0qq">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o0g9e1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vwg1bo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r5iqcr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p13urs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wiqbps">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hvytjy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0e1n33j">
+          <text>"Nicht-Kritisch: Es wurde nur eine konkrete Command-Klasse gefunden - ergibt die Verwendung des Musters an dieser Stelle Sinn?"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eo4ofe">
+        <inputEntry id="UnaryTests_0tep8cf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_073even">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n4zl90">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12kb3df">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03r2g83">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08a9ub4">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_182emo6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mnrq70">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nombal">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07blb4s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b3hgxr">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lq1xj8">
+          <text>"Kritisch: Achtung, es wurden direkte Abhängigkeiten zwischen der Command-Caller-Klasse und den konkreten Command-Instanzen gefunden! Diese sollten nur zwischen ersterem und dem Abstract-Command bestehen."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06idyow">
+        <inputEntry id="UnaryTests_1h9tohn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m2x1px">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vkg9qn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tkylms">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cyqdce">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16bluo1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_088aug1">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rocn3f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ypuk9i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b0nzkl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wb6mra">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vojqlz">
+          <text>"Nicht-Kritisch: Die Kann-Musterkomponente 'CommandClient' scheint nicht einbezogen zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dr8xtr">
+        <inputEntry id="UnaryTests_0fyon0w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15x62jn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pld1c9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1340n73">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a0p4nd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dzx5mm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r6e51f">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16ctop5">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04z28f3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19bqe1l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p33esu">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fmfb06">
+          <text>"Nicht-Kritisch: Es wurden keine Abhängigkeiten zwischen dem CommandClient und den konkreten Commands gefunden, obwohl dieser implementiert ist. Bitte überprüfen Sie die Nutzung des CommandClients."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kt96i8">
+        <inputEntry id="UnaryTests_1k2o5k6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02lcexm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bzma19">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04ngbai">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_045wuls">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1975dmx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vq41kg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gu8sw7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f61hsx">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gt7mqq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18x2eaw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_100guyz">
+          <text>"Nicht-Kritisch: Die Kann-Musterkomponente 'CommandReceiver' scheint nicht einbezogen zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00ysz1p">
+        <inputEntry id="UnaryTests_0yj6wv0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07oqg27">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qx5jbs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07a81kc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0392aft">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wx75y6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1emgy0w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sjgzg1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cx1ydg">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qj11y9">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vsf282">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q3hey5">
+          <text>"Nicht-Kritisch: Bei Ihrer Architektur des Command-Patterns nutzen Sie die CommandReceiver-Musterkomponenten. Eine Nutzung dieser durch den CommandClient würde sich empfehlen, fehlt aber in der aktuellen Architektur."</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1d8fnnj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.5.0">
+  <decision id="Decision_1ypmd13" name="Decide on recommandations">
+    <extensionElements>
+      <biodi:bounds x="150" y="75" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="RULE ORDER">
+      <input id="input_1" label="StPQ01" camunda:inputVariable="StPQ01">
+        <inputExpression id="inputExpression_1" typeRef="boolean">
+          <text>StPQ01</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1pdhctd" label="StPQ02" camunda:inputVariable="StPQ02">
+        <inputExpression id="LiteralExpression_08xf4yg" typeRef="boolean">
+          <text>StPQ02</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0q18t4x" label="StPQ03" camunda:inputVariable="StPQ03">
+        <inputExpression id="LiteralExpression_0sfjelr" typeRef="boolean">
+          <text>StPQ03</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1bm95tu" label="StPQ04" camunda:inputVariable="StPQ04">
+        <inputExpression id="LiteralExpression_11lg3t8" typeRef="boolean">
+          <text>StPQ04</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_14zauak" label="StPQ05" camunda:inputVariable="StPQ05">
+        <inputExpression id="LiteralExpression_0zjqzhy" typeRef="integer">
+          <text>StPQ05</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0wclp8d" label="StPQ06" camunda:inputVariable="StPQ06">
+        <inputExpression id="LiteralExpression_00dxif6" typeRef="boolean">
+          <text>StPQ06</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="rec" name="rec" typeRef="string" />
+      <rule id="DecisionRule_1lhxres">
+        <inputEntry id="UnaryTests_11oiutv">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12bshsf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q0de8b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12kws2c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fgpt1b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m80nou">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v6tygr">
+          <text>"Kritisch: Die Musterkomponente 'AbstractStrategy' scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11xj5j9">
+        <inputEntry id="UnaryTests_0gt264b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ql8ia5">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sal0e1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lepunh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01hvcg1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d5g4mo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1okz7f3">
+          <text>"Kritisch: Die Musterkomponente 'StrategyClient' scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1awvpsl">
+        <inputEntry id="UnaryTests_1o85mk0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18jaskh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_112rpgz">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u3pzam">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j9y26e">
+          <text>&gt;0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hrywc4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12a5li0">
+          <text>"Kritisch: Bitte überprüfen Sie, ob die ConcreteStrategy-Klassen von der Abstract-Strategy-Klasse erben."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1a7b12w">
+        <inputEntry id="UnaryTests_1jlubnm">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07q9ojj">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mvv4pw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a2sj4q">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09v7lir">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mdlo5g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0g5axpo">
+          <text>"Kritisch: Bitte überprüfen Sie, ob Ihr Strategy-Client die AbstractStrategy überhaupt nutzt, es konnte keine Abhängigkeit gefunden werden."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t0o16a">
+        <inputEntry id="UnaryTests_00sm45y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wi6g25">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oq4vxn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_132tgef">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1z0hyiz">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dyiuwt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03qruzh">
+          <text>"Kritisch: Es scheint keine konkreten Strategy-Klassen zu geben. Bitte überprüfen Sie die Nutzung des Musters."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qjl92g">
+        <inputEntry id="UnaryTests_1loa15w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05k1vc5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0br75e9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gwe6jy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ldrmpq">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q4h16k">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u51d8v">
+          <text>"Nicht-Kritisch: Es wurde nur eine konkrete Strategy-Klasse gefunden - ergibt die Verwendung des Musters an dieser Stelle Sinn?"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1jixhsw">
+        <inputEntry id="UnaryTests_1grav53">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03dpuw8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1slohad">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_045ha1g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vp6m5w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wq3fu4">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_043uwo7">
+          <text>"Kritisch: Es wurden direkte Abhängigkeiten zwischen der Strategy-Client-Klasse und den konkreten Strategy-Instanzen gefunden! Diese sollten nur zwischen ersterem und der Abstract-Strategy bestehen."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0aiglti">
+        <inputEntry id="UnaryTests_1qezj2q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06w1vwn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rulp42">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1su7wi8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xn6ka2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a547pu">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eewoui">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

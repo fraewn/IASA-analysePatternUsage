@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1d8fnnj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.5.0">
+  <decision id="Decision_1ypmd12" name="Decide on recommandations">
+    <extensionElements>
+      <biodi:bounds x="150" y="75" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="RULE ORDER">
+      <input id="InputClause_0zeagdt" label="PxPQ01" camunda:inputVariable="PxPQ01">
+        <inputExpression id="LiteralExpression_1k3ygcq" typeRef="boolean">
+          <text>PxPQ01</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0oocqy8" label="PxPQ02" camunda:inputVariable="PxPQ02">
+        <inputExpression id="LiteralExpression_1kmgy6f" typeRef="boolean">
+          <text>PxPQ02</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_16kwfhy" label="PxPQ03" camunda:inputVariable="PxPQ03">
+        <inputExpression id="LiteralExpression_0ew3g8m" typeRef="boolean">
+          <text>PxPQ03</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_185mh6a" label="PxPQ04" camunda:inputVariable="PxPQ04">
+        <inputExpression id="LiteralExpression_0vt8sxv" typeRef="boolean">
+          <text>PxPQ04</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_08o1esl" label="PxPQ05" camunda:inputVariable="PxPQ05">
+        <inputExpression id="LiteralExpression_0yb6x4m" typeRef="boolean">
+          <text>PxPQ05</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0sikiiw" label="PxPQ06" camunda:inputVariable="PxPQ06">
+        <inputExpression id="LiteralExpression_1111trf" typeRef="boolean">
+          <text>PxPQ06</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1frih0f" label="PxPQ07" camunda:inputVariable="PxPQ07">
+        <inputExpression id="LiteralExpression_1exgsrz" typeRef="boolean">
+          <text>PxPQ07</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1x6k0yj" label="PxPQ08" camunda:inputVariable="PxPQ08">
+        <inputExpression id="LiteralExpression_1w94bfh" typeRef="boolean">
+          <text>PxPQ08</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_11wqxko" label="PxPQ09" camunda:inputVariable="PxPQ09">
+        <inputExpression id="LiteralExpression_1ej7u7v" typeRef="boolean">
+          <text>PxPQ09</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_03un3r0">
+        <inputExpression id="LiteralExpression_0yoye0y" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_19deftc">
+        <inputExpression id="LiteralExpression_1u2kcek" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="rec" name="rec" typeRef="string" />
+      <rule id="DecisionRule_0st5tnr">
+        <inputEntry id="UnaryTests_163qsvs">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h1znes">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rny594">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o5i61d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a806tz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v4jm3t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mhzzme">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14jnqdu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16iuaei">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16nlhkr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h4ftzs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jzdr3k">
+          <text>"Kritisch: Die Pattern Komponente Subjekt Interface scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07qgjii">
+        <inputEntry id="UnaryTests_008xi1w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e6xoeq">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01a16d4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ofdaj5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_166gsze">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13wd12w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sxag03">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r6utgf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_098fo3r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xmmiub">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03wbkif">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lnpsxc">
+          <text>"Kritisch: Die Pattern Komponente Proxy scheint nicht implementiert zu sein"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12o6wcv">
+        <inputEntry id="UnaryTests_1lmiuha">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_002vpck">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i6aogv">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ehofff">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12bkd2x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06x6osr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0owqvop">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0so02la">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_024b75w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lz5a7d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00fl16r">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r7exnj">
+          <text>"Kritisch: Die Pattern Komponente echtes Subjekt scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_128fxvf">
+        <inputEntry id="UnaryTests_11tl9ew">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nwfdyt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nedtwg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17iinjb">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t07hty">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rkguqg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_016lbr3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07q1g87">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fffzxn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u8sl6n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nc9rf4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yyn3g7">
+          <text>"Kritisch: Es scheint keine benutzende Klasse (Client) zu geben. Bitte überprüfen, ob das Proxy Pattern überhaupt genutzt wird."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eegrot">
+        <inputEntry id="UnaryTests_10zmbhw">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uyylhx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ne54i9">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cisruv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n33apw">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17w96sn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13k97py">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1528bfe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yuh4q8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16ffvkg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_098y3ca">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cmqeo2">
+          <text>"Kritisch: Bitte überprüfen, ob das echte Subjekt das Subjekt Interface implementieren."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qgu33c">
+        <inputEntry id="UnaryTests_1cm5vi3">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iiswx9">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tj10kp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_193kxd1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0chn585">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jhn68a">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fkvsdl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h9mrjx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_117am90">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dt5dlf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f8ihko">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bh94mz">
+          <text>"Kritisch: Bitte überprüfen, ob die Proxy Klasse das Subjekt Interface implementieren."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bm5aio">
+        <inputEntry id="UnaryTests_1sne2gb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nevjae">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vd73a9">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ga3gq7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t2y0i0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iggb7k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_049prdg">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iw8kgo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wxuoio">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15tuw5t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ny9jnq">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19p9at4">
+          <text>"Kritisch: Bitte überprüfen, ob die Proxy Klasse das echte Subjekt nutzt."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14uzl3r">
+        <inputEntry id="UnaryTests_032yzhu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03l4i76">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_170dcwo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rsdvwe">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0idkuxz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03jr4pz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o4s0j0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ak8i9t">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_054av1t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i3bxn3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kj7s9b">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_175uk1k">
+          <text>"Kritisch: Die benutzende Klasse (Client) nutzt die Proxy Klasse bisher nicht. Bitte überprüfen, ob das Proxy Pattern überhaupt genutzt wird."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04uuary">
+        <inputEntry id="UnaryTests_0zy6tl2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1el70gy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_192jf13">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qoffv0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ahp48b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11bjels">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pnik7n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nicl72">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j8ybzt">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_088h292">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ot6bmf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uau2j8">
+          <text>"Kritisch: Die benutzende Klasse (Client) nutzt die echtes Subjekt Klasse! Für die korrekte Implementierung darf keine Abhängigkeit zwischen den beiden Klassen bestehen!"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1d8fnnj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.5.0">
+  <decision id="Decision_1ypmd10" name="Decide on recommandations">
+    <extensionElements>
+      <biodi:bounds x="150" y="75" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="RULE ORDER">
+      <input id="InputClause_1kb8kkz" label="ObPQ01" camunda:inputVariable="ObPQ01">
+        <inputExpression id="LiteralExpression_0mofjp8" typeRef="boolean">
+          <text>ObPQ01</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_02qoaup" label="ObPQ02" camunda:inputVariable="ObPQ02">
+        <inputExpression id="LiteralExpression_097zffd" typeRef="boolean">
+          <text>ObPQ02</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1d7lle2" label="ObPQ03" camunda:inputVariable="ObPQ03">
+        <inputExpression id="LiteralExpression_1b9k6qo" typeRef="integer">
+          <text>ObPQ03</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1fnrofr" label="ObPQ04" camunda:inputVariable="ObPQ04">
+        <inputExpression id="LiteralExpression_1sb1zrl" typeRef="integer">
+          <text>ObPQ04</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1rz374m" label="ObPQ05" camunda:inputVariable="ObPQ05">
+        <inputExpression id="LiteralExpression_0hmc7vw" typeRef="boolean">
+          <text>ObPQ05</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_16xuysg" label="ObPQ06" camunda:inputVariable="ObPQ06">
+        <inputExpression id="LiteralExpression_0j6akz8" typeRef="boolean">
+          <text>ObPQ06</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_04xpcz5" label="ObPQ07" camunda:inputVariable="ObPQ07">
+        <inputExpression id="LiteralExpression_1pmnq3s" typeRef="boolean">
+          <text>ObPQ07</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0thb89z" label="ObPQ08" camunda:inputVariable="ObPQ08">
+        <inputExpression id="LiteralExpression_1av6tvl" typeRef="boolean">
+          <text>ObPQ08</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="rec" name="rec" typeRef="string" />
+      <rule id="DecisionRule_0xikmb8">
+        <inputEntry id="UnaryTests_1asqa95">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kc7ihm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11lx28j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ziaefs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0veabnd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pd5wh8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1paj96c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0werw7b">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xi0c5p">
+          <text>"Kritisch: Die Pattern Komponente Subscriber Interface scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07b18cz">
+        <inputEntry id="UnaryTests_01ou7l6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k3htrx">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01a4ifx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11g6xq8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g6nki8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_170z2ja">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vdsdks">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sxojcb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rqwq4p">
+          <text>"Kritisch: Die Pattern Komponente Publisher (abstrakt) scheint nicht implementiert zu sein."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lpnf8m">
+        <inputEntry id="UnaryTests_0d8aqce">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zrfpwx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19r4fr2">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m81otd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1goaske">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vk7pqs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09xja21">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mwf47f">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1in2geh">
+          <text>"Kritisch: Es scheint keine ConcretePublisher Klassen zu geben. Bitte überprüfen, ob das Design Pattern überhaupt genutzt wird."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ti3af3">
+        <inputEntry id="UnaryTests_0asb7ol">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16rtpkm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l84g56">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18hodjw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ptk66f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s81w9i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x388v4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zermad">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06c72o2">
+          <text>"Nicht-Kritisch: Es wurde nur eine ConcretePublisher Klasse gefunden. Ergibt die Verwendung des Observer Patterns an dieser Stelle Sinn?"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bze4xw">
+        <inputEntry id="UnaryTests_0y1zffv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m6vdyi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pj9as2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b8ht56">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ayaol5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11zymsk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19da9q8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nc3ilk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06o21et">
+          <text>"Kritisch: Es scheint keine ConcreteSubscriber Klassen zu geben. Bitte überprüfen, ob das Observer Pattern überhaupt genutzt wird."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nmuuhv">
+        <inputEntry id="UnaryTests_1pwk6mz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10fyv2a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sovkii">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fbdfnt">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lryzv1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yzvoib">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l32j5h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ra2llw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jhg7u0">
+          <text>"Nicht-Kritisch: Es wurde nur eine ConcreteSubscriber Klasse gefunden. Ergibt die Verwendung des Observer Patterns an dieser Stelle Sinn?"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0623ov0">
+        <inputEntry id="UnaryTests_0olorko">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v9ozkx">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_164ey7w">
+          <text>&gt;0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17rhe5h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wztmjt">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rga3ud">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0esqhmz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1swgdcm">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bb7dun">
+          <text>"Kritisch: Bitte überprüfen, ob die ConcretePublisher Klassen die Publisher Klasse erweitern."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1r2t0mn">
+        <inputEntry id="UnaryTests_1gg6d3w">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k4iup3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ng0heb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xnpdp8">
+          <text>&gt;0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06whnbq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dxn1zy">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0511k6w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_060r85g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02v163k">
+          <text>"Kritisch: Bitte überprüfen, ob die ConcreteSubscriber Klassen das Subscriber Interface implementieren."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0aiglti">
+        <inputEntry id="UnaryTests_1swdgdr">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01pngqo">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m27cqp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ealby9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eflcdy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1batkym">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ywkmj">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0melpa6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eewoui">
+          <text>"Kritisch: Bitte überprüfen, ob die Publisher Klasse das Subscriber Interface nutzt."</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_049jsee">
+        <inputEntry id="UnaryTests_1r6lad2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vla4o6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0egayak">
+          <text>&gt;0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pxssvo">
+          <text>&gt;0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05b0q6d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qwfik4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m8skys">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v671o1">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jfclct">
+          <text>"Kritisch: Bitte überprüfen, ob die ConcreteSubscriber Klassen die ConcretePublisher Klassen nutzt."</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
