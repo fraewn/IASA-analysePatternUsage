@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_033utez" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.1.2">
+  <bpmn:process id="getGlobalDatabaseCreds" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1aejf0c</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_1skwlq2" name="getGlobalDatabaseCredentials" camunda:class="org.patterncontrol.camunda.setDelegateGetProjectCreds">
+      <bpmn:incoming>SequenceFlow_1aejf0c</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0q98as2</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1aejf0c" sourceRef="StartEvent_1" targetRef="Task_1skwlq2" />
+    <bpmn:endEvent id="EndEvent_0224zm7">
+      <bpmn:incoming>SequenceFlow_1wbjpst</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0q98as2" sourceRef="Task_1skwlq2" targetRef="Task_0l8h50b" />
+    <bpmn:sequenceFlow id="SequenceFlow_1wbjpst" sourceRef="Task_0l8h50b" targetRef="EndEvent_0224zm7" />
+    <bpmn:userTask id="Task_0l8h50b" name="show creds">
+      <bpmn:incoming>SequenceFlow_0q98as2</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1wbjpst</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="getGlobalDatabaseCreds">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="103" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1a63x64_di" bpmnElement="Task_1skwlq2">
+        <dc:Bounds x="308" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1aejf0c_di" bpmnElement="SequenceFlow_1aejf0c">
+        <di:waypoint x="215" y="121" />
+        <di:waypoint x="308" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_0224zm7_di" bpmnElement="EndEvent_0224zm7">
+        <dc:Bounds x="650" y="103" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0q98as2_di" bpmnElement="SequenceFlow_0q98as2">
+        <di:waypoint x="408" y="121" />
+        <di:waypoint x="486" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1wbjpst_di" bpmnElement="SequenceFlow_1wbjpst">
+        <di:waypoint x="586" y="121" />
+        <di:waypoint x="650" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_0lt9f58_di" bpmnElement="Task_0l8h50b">
+        <dc:Bounds x="486" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

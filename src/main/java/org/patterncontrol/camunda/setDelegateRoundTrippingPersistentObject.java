@@ -23,8 +23,6 @@ public class setDelegateRoundTrippingPersistentObject implements JavaDelegate{
 			delegateExecution.setVariable("amountcritical", rTPObjectDTO.getAmountcritical());
 			delegateExecution.setVariable("amountnoncritical", rTPObjectDTO.getAmountnoncritical());
 
-
-
 			}
 		catch(Exception e){
 			System.out.println(e.getStackTrace());

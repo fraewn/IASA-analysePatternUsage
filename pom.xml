@@ -45,6 +45,7 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -154,7 +155,12 @@
 			<artifactId>neo4j-java-driver</artifactId>
 			<version>1.7.4</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.18</version>
+		</dependency>
 		<!-- Add your own dependencies here, if in compile scope, they are added to the war -->
 
 	</dependencies>

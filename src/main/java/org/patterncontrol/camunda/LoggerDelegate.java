@@ -27,4 +27,8 @@ public class LoggerDelegate implements JavaDelegate {
     
   }
 
+  public void printLoggingInfo(String info){
+    LOGGER.info(info);
+  }
+
 }
