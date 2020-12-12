@@ -8,7 +8,7 @@ public class testDBAccess {
 		checkCommandImplementationCheck();
 		checkStrategyImplementationCheck();
 		checkProxyImplementationCheck();
-		checkObserverImplementationCheck();
+		//checkObserverImplementationCheck();
 
 	}
 	public static void checkStrategyImplementationCheck(){
@@ -109,7 +109,7 @@ public class testDBAccess {
 		}
 	}
 
-	public static void checkObserverImplementationCheck(){
+	/*public static void checkObserverImplementationCheck(){
 
 		try{
 			System.out.println("Using Observer Class");
@@ -127,6 +127,6 @@ public class testDBAccess {
 		catch(Exception e){
 			System.out.println(e.getMessage());
 		}
-	}
+	}*/
 
 }

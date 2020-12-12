@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0octjoz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.1.2">
+  <bpmn:process id="getObserverRecommendationsViaGlobal" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1xfrvev</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="ServiceTask_1ppb66c" name="getGlobalDatabaseCredentials" camunda:class="org.patterncontrol.camunda.setDelegateGetProjectCreds">
+      <bpmn:incoming>SequenceFlow_1xfrvev</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1n4zhfd</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="ServiceTask_1t02v7j" name="Set project-uri and prepare evaluation" camunda:class="org.patterncontrol.camunda.setDelegateObserver">
+      <bpmn:incoming>SequenceFlow_1n4zhfd</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1dzzznn</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:businessRuleTask id="BusinessRuleTask_0806m91" name="Decide on recommandations" camunda:resultVariable="recommandation" camunda:decisionRef="Decision_1ypmd10" camunda:mapDecisionResult="collectEntries">
+      <bpmn:incoming>SequenceFlow_0ml81t9</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0og2rvk</bpmn:outgoing>
+    </bpmn:businessRuleTask>
+    <bpmn:serviceTask id="ServiceTask_0o0oy4b" name="Set results to variables in camunda" camunda:class="org.patterncontrol.camunda.recDelegate">
+      <bpmn:incoming>SequenceFlow_0og2rvk</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1mzy252</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="UserTask_1w4beq0" name="View result" camunda:assignee="demo">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:outputParameter name="Output_2nbh33h" />
+        </camunda:inputOutput>
+        <camunda:formData>
+          <camunda:formField id="resulttext" label="Resultat:" type="string" />
+          <camunda:formField id="Recommandation_No_0" label="Handlungsempfehlung:" type="string" />
+          <camunda:formField id="Recommandation_No_1" type="string" />
+          <camunda:formField id="Recommandation_No_2" type="string" />
+          <camunda:formField id="Recommandation_No_3" type="string" />
+          <camunda:formField id="Recommandation_No_4" type="string" />
+          <camunda:formField id="Recommandation_No_5" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1mzy252</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_05bvay1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0og2rvk" sourceRef="BusinessRuleTask_0806m91" targetRef="ServiceTask_0o0oy4b" />
+    <bpmn:sequenceFlow id="SequenceFlow_1mzy252" sourceRef="ServiceTask_0o0oy4b" targetRef="UserTask_1w4beq0" />
+    <bpmn:sequenceFlow id="SequenceFlow_1n4zhfd" sourceRef="ServiceTask_1ppb66c" targetRef="ServiceTask_1t02v7j" />
+    <bpmn:sequenceFlow id="SequenceFlow_1xfrvev" sourceRef="StartEvent_1" targetRef="ServiceTask_1ppb66c" />
+    <bpmn:endEvent id="EndEvent_0tkuehm">
+      <bpmn:incoming>SequenceFlow_05bvay1</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_05bvay1" sourceRef="UserTask_1w4beq0" targetRef="EndEvent_0tkuehm" />
+    <bpmn:userTask id="Task_17b21v3" name="see vars">
+      <bpmn:incoming>SequenceFlow_1dzzznn</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ml81t9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1dzzznn" sourceRef="ServiceTask_1t02v7j" targetRef="Task_17b21v3" />
+    <bpmn:sequenceFlow id="SequenceFlow_0ml81t9" sourceRef="Task_17b21v3" targetRef="BusinessRuleTask_0806m91" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="getObserverRecommendationsViaGlobal">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="125" y="103" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1ppb66c_di" bpmnElement="ServiceTask_1ppb66c">
+        <dc:Bounds x="225" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1t02v7j_di" bpmnElement="ServiceTask_1t02v7j">
+        <dc:Bounds x="355" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BusinessRuleTask_0806m91_di" bpmnElement="BusinessRuleTask_0806m91">
+        <dc:Bounds x="599" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0o0oy4b_di" bpmnElement="ServiceTask_0o0oy4b">
+        <dc:Bounds x="737" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1w4beq0_di" bpmnElement="UserTask_1w4beq0">
+        <dc:Bounds x="883" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0og2rvk_di" bpmnElement="SequenceFlow_0og2rvk">
+        <di:waypoint x="699" y="121" />
+        <di:waypoint x="737" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1mzy252_di" bpmnElement="SequenceFlow_1mzy252">
+        <di:waypoint x="837" y="121" />
+        <di:waypoint x="883" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1n4zhfd_di" bpmnElement="SequenceFlow_1n4zhfd">
+        <di:waypoint x="325" y="121" />
+        <di:waypoint x="355" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1xfrvev_di" bpmnElement="SequenceFlow_1xfrvev">
+        <di:waypoint x="161" y="121" />
+        <di:waypoint x="225" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_0tkuehm_di" bpmnElement="EndEvent_0tkuehm">
+        <dc:Bounds x="1030" y="103" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_05bvay1_di" bpmnElement="SequenceFlow_05bvay1">
+        <di:waypoint x="983" y="121" />
+        <di:waypoint x="1030" y="121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1x783s8_di" bpmnElement="Task_17b21v3">
+        <dc:Bounds x="467" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1dzzznn_di" bpmnElement="SequenceFlow_1dzzznn">
+        <di:waypoint x="405" y="81" />
+        <di:waypoint x="405" y="61" />
+        <di:waypoint x="517" y="61" />
+        <di:waypoint x="517" y="81" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ml81t9_di" bpmnElement="SequenceFlow_0ml81t9">
+        <di:waypoint x="528" y="81" />
+        <di:waypoint x="534" y="61" />
+        <di:waypoint x="649" y="61" />
+        <di:waypoint x="649" y="81" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -14,8 +14,8 @@ public class setDelegateGetProjectCreds implements JavaDelegate {
 		try{
 			postgresConnect postgresConnect = new postgresConnect();
 			Connection connection = postgresConnect.getConnection();
-			// int project_id = (int) delegateExecution.getVariable( "project_id");
-			int project_id = 1;
+
+			int project_id = Integer.parseInt(delegateExecution.getVariable( "project_id").toString());
 			String project_giturl = "";
 			String projectdatabase_url = "";
 			String projectdatabase_user = "";

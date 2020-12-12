@@ -13,7 +13,7 @@ public class postgresTestConnection {
 			postgresConnect postgresConnect = new postgresConnect();
 			Connection connection = postgresConnect.getConnection();
 			// int project_id = (int) delegateExecution.getVariable( "project_id");
-			int project_id = 1;
+			int project_id = 2;
 			String project_giturl = "";
 			String projectdatabase_url = "";
 			String projectdatabase_user = "";

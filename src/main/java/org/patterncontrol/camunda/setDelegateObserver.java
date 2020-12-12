@@ -10,8 +10,19 @@ public class setDelegateObserver implements JavaDelegate{
 	public void execute(DelegateExecution delegateExecution) throws Exception {
 		try {
 			System.out.println("Using Observer Class");
+
+			// get project database parameters from camunda process
+			String projectdatabase_url = delegateExecution.getVariable("projectdatabase_url").toString();
+			String projectdatabase_user = delegateExecution.getVariable("projectdatabase_user").toString();
+			String projectdatabase_password = delegateExecution.getVariable("projectdatabase_password").toString();
+			System.out.println(projectdatabase_url + ", " + projectdatabase_user + ", " + projectdatabase_password);
+
 			ObserverPatternDAO observerPatternDAO = ObserverPatternDAO.getInstance();
-			ObserverPatternDTO observerPatternDTO = observerPatternDAO.checkObserverImplementation();
+			// call implementation check with project database parameters
+			ObserverPatternDTO observerPatternDTO = observerPatternDAO.checkObserverImplementation(projectdatabase_url,
+					projectdatabase_user, projectdatabase_password);
+
+			// set camunda variables as input to 'Auswertung_Observer.dmn'
 			delegateExecution.setVariable("ObPQ01", observerPatternDTO.getObPQ01());
 			delegateExecution.setVariable("ObPQ02", observerPatternDTO.getObPQ02());
 			delegateExecution.setVariable("ObPQ03", observerPatternDTO.getObPQ03());
@@ -22,7 +33,6 @@ public class setDelegateObserver implements JavaDelegate{
 			delegateExecution.setVariable("ObPQ08", observerPatternDTO.getObPQ08());
 			delegateExecution.setVariable("amountcritical", observerPatternDTO.getAmountcritical());
 			delegateExecution.setVariable("amountnoncritical", observerPatternDTO.getAmountnoncritical());
-
 
 			}
 		catch(Exception e){
