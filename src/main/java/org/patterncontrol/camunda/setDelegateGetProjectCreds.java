@@ -15,16 +15,16 @@ public class setDelegateGetProjectCreds implements JavaDelegate {
 			postgresConnect postgresConnect = new postgresConnect();
 			Connection connection = postgresConnect.getConnection();
 
+			// get project_id that is inserted as a variable via REST-call that starts the process
+			// project_id is the id of the project to be analysed
 			int project_id = Integer.parseInt(delegateExecution.getVariable( "project_id").toString());
-			String project_giturl = "";
+
+			// variables for database creds of neo4j project database
 			String projectdatabase_url = "";
 			String projectdatabase_user = "";
 			String projectdatabase_password = "";
 
-			ResultSet rs_giturl = getCreds(connection, "SELECT PROJECT_GITURL FROM PROJECT WHERE PROJECT_ID=?", project_id);
-			while(rs_giturl.next()) {
-				project_giturl = rs_giturl.getString(1);
-			}
+			// for this specific project, the global_database is asked for the neo4j project database creds
 			ResultSet rs_databaseCreds = getCreds(connection, "SELECT PROJECTDATABASE_URL, PROJECTDATABASE_USER, PROJECTDATABASE_PASSWORD FROM " +
 					"PROJECTDATABASE WHERE PROJECT_ID=?", project_id);
 			while(rs_databaseCreds.next()){
@@ -33,18 +33,18 @@ public class setDelegateGetProjectCreds implements JavaDelegate {
 				projectdatabase_password = rs_databaseCreds.getString(3);
 			}
 
-			String test = project_id + ": giturl: " + project_giturl + ", project_databaseurl: " + projectdatabase_url  +
+			String test = project_id + ", project_databaseurl: " + projectdatabase_url  +
 					", projectdatabase_user: " + projectdatabase_user + ", projectdatabasepassword: " + projectdatabase_password;
 			System.out.println(test);
 			LoggerDelegate loggerDelegate = new LoggerDelegate();
 			loggerDelegate.printLoggingInfo(test);
 
-			delegateExecution.setVariable("project_giturl", project_giturl);
+			// neo4j project database creds are set as global variables in camunda bpmn process
 			delegateExecution.setVariable("projectdatabase_url", projectdatabase_url);
 			delegateExecution.setVariable("projectdatabase_user", projectdatabase_user);
 			delegateExecution.setVariable("projectdatabase_password", projectdatabase_password);
 
-
+			// close connection to global database iasa_global
 			connection.close();
 		}
 		catch (Exception e){
