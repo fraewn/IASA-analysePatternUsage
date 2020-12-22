@@ -10,8 +10,15 @@ public class setDelegateProxy implements JavaDelegate{
 	public void execute(DelegateExecution delegateExecution) throws Exception {
 		try {
 			System.out.println("Using Proxy Class");
+
+			// get project database parameters from camunda process
+			String projectdatabase_url = delegateExecution.getVariable("projectdatabase_url").toString();
+			String projectdatabase_user = delegateExecution.getVariable("projectdatabase_user").toString();
+			String projectdatabase_password = delegateExecution.getVariable("projectdatabase_password").toString();
+			System.out.println(projectdatabase_url + ", " + projectdatabase_user + ", " + projectdatabase_password);
+
 			ProxyPatternDAO proxyPatternDAO = ProxyPatternDAO.getInstance();
-			ProxyPatternDTO proxyPatternDTO = proxyPatternDAO.checkProxyImplementation();
+			ProxyPatternDTO proxyPatternDTO = proxyPatternDAO.checkProxyImplementation(projectdatabase_url, projectdatabase_user, projectdatabase_password);
 			delegateExecution.setVariable("PxPQ01", proxyPatternDTO.getPxPQ01());
 			delegateExecution.setVariable("PxPQ02", proxyPatternDTO.getPxPQ02());
 			delegateExecution.setVariable("PxPQ03", proxyPatternDTO.getPxPQ03());

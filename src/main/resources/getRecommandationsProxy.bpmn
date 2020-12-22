@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_07z5n24" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.5.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_07z5n24" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.1.2">
   <bpmn:process id="getRecommandation_Proxy" name="Check Proxy Pattern Implementation" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>SequenceFlow_1o0mqu7</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:serviceTask id="Task_0110vlu" name="Set project-uri and prepare evaluation" camunda:class="org.patterncontrol.camunda.setDelegateProxy">
-      <bpmn:incoming>SequenceFlow_1o0mqu7</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1i104ts</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1u32vi5</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:sequenceFlow id="SequenceFlow_1o0mqu7" sourceRef="StartEvent_1" targetRef="Task_0110vlu" />
+    <bpmn:sequenceFlow id="SequenceFlow_1o0mqu7" sourceRef="StartEvent_1" targetRef="ServiceTask_1hgawoa" />
     <bpmn:businessRuleTask id="Task_1v15txi" name="Decide on recommandations" camunda:resultVariable="recommandation" camunda:decisionRef="Decision_1ypmd12" camunda:mapDecisionResult="collectEntries">
       <bpmn:incoming>SequenceFlow_1u32vi5</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_14l9zbr</bpmn:outgoing>
@@ -42,6 +42,11 @@
       <bpmn:incoming>SequenceFlow_14l9zbr</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0e4u526</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:serviceTask id="ServiceTask_1hgawoa" name="getGlobalDatabaseCredentials" camunda:class="org.patterncontrol.camunda.setDelegateGetProjectCreds">
+      <bpmn:incoming>SequenceFlow_1o0mqu7</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1i104ts</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1i104ts" sourceRef="ServiceTask_1hgawoa" targetRef="Task_0110vlu" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="getRecommandation_Proxy">
@@ -53,44 +58,43 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1o0mqu7_di" bpmnElement="SequenceFlow_1o0mqu7">
         <di:waypoint x="189" y="121" />
-        <di:waypoint x="405" y="121" />
+        <di:waypoint x="239" y="121" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="BusinessRuleTask_05oluwl_di" bpmnElement="Task_1v15txi">
-        <dc:Bounds x="560" y="90" width="100" height="80" />
+        <dc:Bounds x="560" y="81" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="UserTask_107vdqn_di" bpmnElement="Task_0mfxo8k">
-        <dc:Bounds x="851" y="83" width="100" height="80" />
+        <dc:Bounds x="854" y="81" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1u32vi5_di" bpmnElement="SequenceFlow_1u32vi5">
         <di:waypoint x="505" y="121" />
-        <di:waypoint x="533" y="121" />
-        <di:waypoint x="533" y="130" />
-        <di:waypoint x="560" y="130" />
+        <di:waypoint x="560" y="121" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="EndEvent_1yjoaqf_di" bpmnElement="EndEvent_1yjoaqf">
         <dc:Bounds x="1005" y="103" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_0tcw41t_di" bpmnElement="SequenceFlow_0tcw41t">
-        <di:waypoint x="951" y="123" />
-        <di:waypoint x="978" y="123" />
-        <di:waypoint x="978" y="121" />
+        <di:waypoint x="954" y="121" />
         <di:waypoint x="1005" y="121" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_14l9zbr_di" bpmnElement="SequenceFlow_14l9zbr">
-        <di:waypoint x="660" y="130" />
-        <di:waypoint x="683" y="130" />
-        <di:waypoint x="683" y="121" />
+        <di:waypoint x="660" y="121" />
         <di:waypoint x="705" y="121" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0e4u526_di" bpmnElement="SequenceFlow_0e4u526">
         <di:waypoint x="805" y="121" />
-        <di:waypoint x="828" y="121" />
-        <di:waypoint x="828" y="123" />
-        <di:waypoint x="851" y="123" />
+        <di:waypoint x="854" y="121" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ServiceTask_0lviqxj_di" bpmnElement="Task_01077oe">
         <dc:Bounds x="705" y="81" width="100" height="80" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1hgawoa_di" bpmnElement="ServiceTask_1hgawoa">
+        <dc:Bounds x="239" y="81" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1i104ts_di" bpmnElement="SequenceFlow_1i104ts">
+        <di:waypoint x="339" y="121" />
+        <di:waypoint x="405" y="121" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

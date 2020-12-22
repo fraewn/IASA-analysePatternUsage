@@ -33,6 +33,7 @@ public class setDelegateGetProjectCreds implements JavaDelegate {
 				projectdatabase_password = rs_databaseCreds.getString(3);
 			}
 
+			// some tests and logging
 			String test = project_id + ", project_databaseurl: " + projectdatabase_url  +
 					", projectdatabase_user: " + projectdatabase_user + ", projectdatabasepassword: " + projectdatabase_password;
 			System.out.println(test);

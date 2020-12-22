@@ -1,7 +1,6 @@
 package org.patterncontrol.model.dao;
 
 import org.patterncontrol.model.dto.ObserverPatternDTO;
-import org.patterncontrol.model.util.ProjectDatabaseCredentials;
 import org.patterncontrol.service.neo4jConnect;
 
 public class ObserverPatternDAO {
@@ -14,7 +13,6 @@ public class ObserverPatternDAO {
         return instance;
     }
 
-    // method to execute queries to check strategy pattern implementation
     public ObserverPatternDTO checkObserverImplementation(String projectdatabase_url, String projectdatabase_user, String projectdatabase_password) throws Exception {
         // class to get user data from database
         try ( neo4jConnect connection = new neo4jConnect( projectdatabase_url, projectdatabase_user, projectdatabase_password))

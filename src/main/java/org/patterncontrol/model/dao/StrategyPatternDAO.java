@@ -15,13 +15,9 @@ public class StrategyPatternDAO {
 	}
 
 	// method to execute queries to check strategy pattern implementation
-	public StrategyPatternDTO checkStrategyImplementation() throws Exception {
-		String url = ProjectDatabaseCredentials.getProjectdatabase_url();
-		String user = ProjectDatabaseCredentials.getProjectdatabase_username();
-		String password = ProjectDatabaseCredentials.getProjectdatabase_password();
-
+	public StrategyPatternDTO checkStrategyImplementation(String projectdatabase_url, String projectdatabase_user, String projectdatabase_password) throws Exception {
 		// class to get user data from database
-		try ( neo4jConnect connection = new neo4jConnect(url, user, password))
+		try ( neo4jConnect connection = new neo4jConnect(projectdatabase_url, projectdatabase_user, projectdatabase_password))
 		{
 			// send request with username and password to neo4j
 			return connection.checkStrategyImplementation();

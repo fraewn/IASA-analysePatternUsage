@@ -10,8 +10,16 @@ public class setDelegateCommand implements JavaDelegate{
 	public void execute(DelegateExecution delegateExecution) throws Exception {
 		try {
 			System.out.println("Using Command Class");
+
+			// get project database parameters from camunda process
+			String projectdatabase_url = delegateExecution.getVariable("projectdatabase_url").toString();
+			String projectdatabase_user = delegateExecution.getVariable("projectdatabase_user").toString();
+			String projectdatabase_password = delegateExecution.getVariable("projectdatabase_password").toString();
+			System.out.println(projectdatabase_url + ", " + projectdatabase_user + ", " + projectdatabase_password);
+
 			CommandPatternDAO commandPatternDAO = CommandPatternDAO.getInstance();
-			CommandPatternDTO commandPatternDTO = commandPatternDAO.checkCommandImplementation();
+			CommandPatternDTO commandPatternDTO = commandPatternDAO.checkCommandImplementation(projectdatabase_url, projectdatabase_user,
+					projectdatabase_password);
 			delegateExecution.setVariable("CmPQ01", commandPatternDTO.getCmPQ01());
 			delegateExecution.setVariable("CmPQ02", commandPatternDTO.getCmPQ02());
 			delegateExecution.setVariable("CmPQ03", commandPatternDTO.getCmPQ03());
@@ -26,8 +34,6 @@ public class setDelegateCommand implements JavaDelegate{
 			System.out.println("amount noncritical: " + commandPatternDTO.getAmountnoncritical());
 			delegateExecution.setVariable("amountcritical", commandPatternDTO.getAmountcritical());
 			delegateExecution.setVariable("amountnoncritical", commandPatternDTO.getAmountnoncritical());
-
-
 			}
 		catch(Exception e){
 			System.out.println(e.getStackTrace());
